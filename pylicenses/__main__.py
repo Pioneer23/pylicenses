@@ -84,8 +84,7 @@ if __name__ == '__main__':
     lic = PyLicenses(github_auth=github_auth)
     lic.discover()
     if options.stats:
-        print_license_stats(lic)
-        print_missing(lic)
+        save_license_trail(lic)
     else:
         lic.discover_package_dependencies()
         print_catalog(lic)
